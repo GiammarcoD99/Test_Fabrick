@@ -117,7 +117,9 @@ public class TestClass {
 	}
 	
 	
-	//Il numero delle transazioni alcune volte era 0, puo' causare un esito negativo
+	/** Il numero di transazioni disponibili per il periodo di tempo indicato è
+	*	a volte 0, inaspettatamente. Ritengo corretto che in quel caso il test fallisca
+	*/
 	@Test
 	public void letturaTransazioni() throws IOException, JSONException {
 		String dateFrom = "2019-01-01";
