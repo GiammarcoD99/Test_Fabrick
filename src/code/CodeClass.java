@@ -25,21 +25,21 @@ public class CodeClass {
 	public static final Long accountId = 14537780L;
 	
 	public static String sampleTransferJson = "{"  
-								      + "\"creditor\": {"  
-								    	+ "\"name\": \"John Doe\"," 
-								    	+ "\"account\": {"  
-								    		+ "\"accountCode\": \"IT66R0200841133000420092892\","
-								    		+ "\"bicCode\": \"UNCRITM1NL7\""
-								    		+ "}"  
-								    	+ "}," 
-								      + "\"executionDate\": \"#TOMORROW#\","
-								      + "\"description\": \"Payment invoice 75/2017\"," 
-								      + "\"amount\": 10," 
-								      + "\"currency\": \"EUR\"" 
-								      + "}";
+										     + "\"creditor\": {"  
+										       + "\"name\": \"John Doe\"," 
+										       + "\"account\": {"  
+										         + "\"accountCode\": \"IT66R0200841133000420092892\","
+										    	  + "\"bicCode\": \"UNCRITM1NL7\""
+										    	  + "}"  
+										        + "}," 
+										     + "\"executionDate\": \"#TOMORROW#\","
+										     + "\"description\": \"Payment invoice 75/2017\"," 
+										     + "\"amount\": 10," 
+										     + "\"currency\": \"EUR\"" 
+										    + "}";
 
-	
-	public String leggiSaldo() throws IOException, JSONException {
+
+public String leggiSaldo() throws IOException, JSONException {
 		System.out.println("\n ----- Lettura saldo -----\n");
 		
 		String path = baseUrl + accountId + "/balance";
@@ -106,7 +106,7 @@ public class CodeClass {
 		if ( status.equals("OK") ) {
 			esito =  jsonObject.getJSONObject("payload").get("status").toString();
 		    
-			System.out.println(" - Stato: " + status + " ["+ esito + "]\n");
+			System.out.println(" - Stato: " + status + " [" + esito + "]\n");
 			
 		} else {
 			showErrors( jsonObject );
